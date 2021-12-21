@@ -92,6 +92,9 @@ pub enum Subcommands {
         root: Option<PathBuf>,
     },
 
+    #[structopt(about = "launch solidity console")]
+    Console,
+
     #[structopt(about = "creates a snapshot of each test's gas usage")]
     Snapshot(snapshot::SnapshotArgs),
 }

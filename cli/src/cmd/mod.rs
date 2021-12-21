@@ -1,6 +1,7 @@
 //! Subcommands for forge
 
 pub mod build;
+pub mod console;
 pub mod create;
 pub mod snapshot;
 pub mod test;

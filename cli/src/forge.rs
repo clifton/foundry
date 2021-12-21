@@ -121,6 +121,7 @@ fn main() -> eyre::Result<()> {
         Subcommands::Snapshot(cmd) => {
             cmd.run()?;
         }
+        Subcommands::Console => cmd::console::launch(),
     }
 
     Ok(())
