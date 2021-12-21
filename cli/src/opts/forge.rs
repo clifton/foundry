@@ -3,7 +3,7 @@ use structopt::StructOpt;
 use ethers::types::Address;
 use std::{path::PathBuf, str::FromStr};
 
-use crate::cmd::{build::BuildArgs, create, snapshot, test};
+use crate::cmd::{build::BuildArgs, console, create, snapshot, test};
 
 #[derive(Debug, StructOpt)]
 pub struct Opts {
@@ -93,7 +93,7 @@ pub enum Subcommands {
     },
 
     #[structopt(about = "launch solidity console")]
-    Console,
+    Console(console::ConsoleArgs),
 
     #[structopt(about = "creates a snapshot of each test's gas usage")]
     Snapshot(snapshot::SnapshotArgs),
